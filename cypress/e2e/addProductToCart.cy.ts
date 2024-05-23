@@ -61,7 +61,7 @@ describe("template spec", () => {
     productSearchPage.choosePriceFrom(filters.priceFrom.toString());
     productSearchPage.choosePriceTo(filters.priceTo.toString());
     productSearchPage.chooseProducent(filters.producent);
-    cy.wait(3000);
+    cy.contains(exactProductName).should("be.visible");
 
     //those functions might be done via backend in normal project
   });
