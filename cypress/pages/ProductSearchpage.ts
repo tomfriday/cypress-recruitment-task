@@ -5,7 +5,7 @@ export interface IProductSearchPage {
   verifySearchResultContainsKeyword(keyword: string): void;
   verifyAllProductsAreFromProducer(producent: string): void;
   verifyAllProductsAreInPriceRange(minPrice: number, maxPrice: number): void;
-  goToProductDetails(): void;
+  goToProductDetails(product: string): void;
 }
 
 class ProductSearchPage implements IProductSearchPage {
@@ -19,7 +19,6 @@ class ProductSearchPage implements IProductSearchPage {
     productTitles: () => cy.get(".listingItemHeaderScss-name-M0z"),
     productPrice: () => cy.get(".priceScss-wrapper-2Eb"),
     searchList: () => cy.get(".listingItemsDesktopScss-content-1Tj"),
-    firstElementFromList: () => this.elements.productTitles().first(),
   };
 
   choosePriceFrom(price: string) {
@@ -55,8 +54,8 @@ class ProductSearchPage implements IProductSearchPage {
         });
     });
   }
-  goToProductDetails() {
-    this.elements.firstElementFromList().click();
+  goToProductDetails(product: string) {
+    this.elements.productTitles().contains(product).click();
   }
 }
 

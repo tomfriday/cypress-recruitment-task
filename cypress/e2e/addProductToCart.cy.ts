@@ -67,7 +67,7 @@ describe("template spec", () => {
   });
 
   it("go to first product details Page and product to cart", () => {
-    productSearchPage.goToProductDetails();
+    productSearchPage.goToProductDetails(exactProductName);
     productDetailsPage.addToCart();
   });
   it("go to Cart", () => {
