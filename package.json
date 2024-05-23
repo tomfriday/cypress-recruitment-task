@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/cypress": "^1.1.3",
+    "@types/node": "^20.12.12",
+    "cypress": "^13.10.0",
+    "cypress-mailosaur": "^2.14.0",
+    "typescript": "^5.4.5"
+  }
+}
