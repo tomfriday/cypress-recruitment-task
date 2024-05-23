@@ -18,7 +18,7 @@ let filters: {
   priceTo: number;
 };
 
-describe("template spec", () => {
+describe("search product, filters testing", () => {
   before(() => {
     cy.fixture("filters").then((data) => {
       filters = data;

@@ -8,13 +8,13 @@ const serverID = "0sssjomb";
 
 const password = "password123";
 
-describe("template spec", () => {
+describe("Register to the system", () => {
   before(() => {
     cy.clearAllCookies();
     cy.clearAllLocalStorage();
   });
 
-  it("passes", () => {
+  it("viist register page", () => {
     cy.visit("/customer/account/register/standard");
     global.acceptCookies();
   });

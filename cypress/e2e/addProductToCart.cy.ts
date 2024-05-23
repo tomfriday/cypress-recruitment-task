@@ -28,7 +28,7 @@ before(() => {
   cy.clearAllCookies();
   cy.clearAllLocalStorage();
 });
-describe("template spec", () => {
+describe("Add product to the card", () => {
   before(() => {
     cy.clearAllCookies();
     cy.clearAllLocalStorage();
